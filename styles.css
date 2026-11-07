@@ -108,7 +108,7 @@ ul {
   line-height: 1.4;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 14%;
+  letter-spacing: 0.14em;
 }
 .hero-title {
   font-family: Lora, sans-serif;
@@ -177,4 +177,40 @@ ul {
   margin-left: auto;
   margin-right: 56px;
   color: var(--color-secondary-text);
+}
+/* About section */
+.about {
+  display: flex;
+  justify-content: space-between;
+  min-height: 752px;
+  align-items: center;
+}
+.about-header {
+  line-height: 1.15;
+  font-size: 52px;
+  font-family: Lora sans-serif;
+  font-weight: 400;
+}
+.about-paragraph {
+  line-height: 1.41;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  min-width: 500px;
+}
+.about-text-school {
+  max-width: 510px;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 18px;
+}
+.open {
+  font-size: 16px;
+}
+.find {
+  font-weight: 600;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.about-image {
+  border-radius: 263px 263px 10px 10px;
 }
