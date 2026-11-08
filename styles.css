@@ -4,10 +4,15 @@
   --color-main-lime: #d5e4ab;
   --color-main-line: #d4d9cc;
   --color-secondary-text: #647167;
+  --color-study-bg: #e8ecdf;
 }
+
+/* Base */
 * {
   box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
+
 body {
   background-color: var(--color-main-light);
   color: var(--color-main-green);
@@ -17,20 +22,6 @@ body {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: var(--color-main-green);
-  font-size: 13px;
-}
-a:hover {
-  color: var(--color-secondary-text);
-}
-
-.container {
-  max-width: 1264px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
 h1,
 h2,
 h3,
@@ -40,117 +31,35 @@ h6,
 p {
   margin-top: 0;
 }
-/* Header */
-ul {
+
+ul,
+ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-.header-container {
-  padding: 26px 64px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header-list-container {
-  display: flex;
-  gap: 30px;
-  min-width: 430px;
-  justify-content: center;
-}
-.header-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  background-color: var(--color-main-green);
-  color: var(--color-main-light);
-  padding: 15px 20px;
-  font-size: 14px;
-  font-family: Manrope, sans-serif;
-  min-width: 216px;
-  line-height: 1.57;
-}
-.header-button:hover {
-  color: var(--color-main-light);
-  background-color: var(--color-secondary-text);
-}
-.header-logo {
-  min-width: 232px;
-}
-/* Hero section */
-.hero {
-  background-image:
-    linear-gradient(
-      to right,
-      color-mix(in srgb, var(--color-main-green) 85%, transparent) 0%,
-      color-mix(in srgb, var(--color-main-green) 45%, transparent) 45%,
-      color-mix(in srgb, var(--color-main-green) 15%, transparent) 100%
-    ),
-    url(School.images/hero.jpg);
 
-  max-width: 1376px;
-  width: calc(100%-64px);
-  margin: 0 auto;
-  min-height: 704px;
-  background-size: cover;
-  background-position: center;
+img {
+  max-width: 100%;
+  height: auto;
 }
-.hero-position {
-  max-width: 690px;
-  min-height: 465px;
-  padding-left: 56px;
-  padding-top: 112px;
-}
-.hero-adress-text {
-  color: var(--color-main-lime);
-  font-family: Manrope, sans-serif;
-  line-height: 1.4;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-}
-.hero-title {
-  font-family: Lora, sans-serif;
-  line-height: 1.1;
-  font-size: 76px;
-  color: var(--color-main-light);
-  max-width: 550px;
-  font-weight: 400;
-}
-.hero-about-text {
-  color: var(--color-main-light);
-  line-height: 1.6;
-  font-weight: 400;
-  font-size: 17px;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-.hero-section-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+
+a {
+  text-decoration: none;
   color: var(--color-main-green);
-  background-color: var(--color-main-lime);
-  min-width: 270px;
-  min-height: 52px;
-  border-radius: 6px;
-  font-weight: 600;
-  line-height: 1.57;
-  font-size: 14px;
-  padding: 15px 20px;
+  font-size: 13px;
 }
-.second {
-  margin-bottom: 26px;
+
+a:hover {
+  color: var(--color-secondary-text);
 }
-.last-hero-text {
-  margin-top: 82px;
-  line-height: 1.5;
-  font-weight: 500;
-  font-size: 10px;
-  color: var(--color-main-light);
+
+.container {
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
-/* hiddens section */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -160,12 +69,150 @@ ul {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+  white-space: nowrap;
 }
+
+/* Shared text */
+.paragraph {
+  line-height: 1.41;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+}
+
+.second-paragraph {
+  line-height: 1.7;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Section head: title left, text right */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.section-head-text {
+  max-width: 450px;
+}
+
+/* Header */
+.header-container {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 232px;
+}
+
+.header-list-container {
+  display: flex;
+  gap: 30px;
+}
+
+.header-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 216px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  background-color: var(--color-main-green);
+  color: var(--color-main-light);
+  font-size: 14px;
+  line-height: 1.57;
+}
+
+.header-button:hover {
+  color: var(--color-main-light);
+  background-color: var(--color-secondary-text);
+}
+
+/* Hero */
+.hero {
+  max-width: 1376px;
+  width: calc(100% - 64px);
+  min-height: 704px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--color-main-green) 85%, transparent) 0%,
+      color-mix(in srgb, var(--color-main-green) 45%, transparent) 45%,
+      color-mix(in srgb, var(--color-main-green) 15%, transparent) 100%
+    ),
+    url(School.images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-position {
+  max-width: 690px;
+  min-height: 465px;
+  padding-left: 56px;
+  padding-top: 112px;
+}
+
+.hero-address-text {
+  color: var(--color-main-lime);
+  line-height: 1.4;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.hero-title {
+  max-width: 550px;
+  font-family: Lora, serif;
+  font-size: 76px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-main-light);
+}
+
+.hero-about-text {
+  margin-bottom: 26px;
+  color: var(--color-main-light);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.hero-section-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 270px;
+  min-height: 52px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  background-color: var(--color-main-lime);
+  color: var(--color-main-green);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.57;
+}
+
+.last-hero-text {
+  margin-top: 82px;
+  color: var(--color-main-light);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Values strip */
 .values-list {
   display: flex;
   align-items: center;
   min-height: 116px;
 }
+
 .values-list-items {
   flex: 1;
   display: flex;
@@ -178,79 +225,119 @@ ul {
   margin-right: 56px;
   color: var(--color-secondary-text);
 }
-/* About section */
+
+/* About */
 .about {
   display: flex;
   justify-content: space-between;
-  min-height: 752px;
   align-items: center;
+  min-height: 752px;
 }
+
 .about-header {
-  line-height: 1.15;
+  font-family: Lora, serif;
   font-size: 52px;
-  font-family: Lora sans-serif;
   font-weight: 400;
+  line-height: 1.15;
 }
-.about-paragraph {
-  line-height: 1.41;
-  letter-spacing: 0.14em;
-  font-size: 12px;
-  min-width: 500px;
-}
+
 .about-text-school {
   max-width: 510px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.7;
-  font-size: 18px;
 }
-.open {
-  font-size: 16px;
-}
+
 .find {
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.6;
-  font-size: 15px;
 }
+
 .about-image {
   border-radius: 263px 263px 10px 10px;
 }
-/* Study section */
+
+/* Study */
 .study {
-  background-color: #e8ecdf;
   min-height: 532px;
+  padding-top: 84px;
+  padding-bottom: 92px;
+  background-color: var(--color-study-bg);
 }
+
 .study-header {
-  font-family: Lora sans-serif;
-  line-height: 1.14;
+  font-family: Lora, serif;
   font-size: 48px;
+  font-weight: 400;
+  line-height: 1.14;
 }
-.study-first-text {
-  line-height: 1.5;
-  font-size: 12px;
+
+.study-ol {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.study-ol li {
+  flex: 1;
+}
+
+.study-second-header {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.study-about-text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Team */
+.team {
+  min-height: 750px;
+  padding-top: 96px;
+}
+
+.team-header {
+  font-family: Lora, serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.team-photo {
+  border-radius: 8px;
+}
+.team-section-cards {
+  display: flex;
+  justify-content: space-between;
+}
+.team-section-cards-text {
+  display: flex;
+  gap: 24px;
+}
+.team-about {
+  line-height: 1.41;
   font-weight: 600;
   letter-spacing: 0.14em;
+  font-size: 12px;
 }
-.study-first-why {
+.team-name {
+  line-height: 1.3;
+  font-size: 26px;
+  font-family: lora, serif;
+  font-weight: 400;
+}
+.team-subject {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.team-blockquote {
   line-height: 1.7;
   font-size: 16px;
   font-weight: 400;
-}
-.study-ol {
-  list-style-type: none;
-  display: flex;
-  padding: 0px 0px 92px 0px;
-}
-.study-second-header {
-  line-height: 1.3;
-  font-weight: 600;
-  font-size: 24px;
-}
-.study-about-text {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 1.7;
-}
-.section-head {
-  display: flex;
-  padding-top: 84px;
 }
