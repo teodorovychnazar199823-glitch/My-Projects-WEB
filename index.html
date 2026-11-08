@@ -193,57 +193,70 @@
           <div class="section-head">
             <div class="section-head-title">
               <p class="paragraph">04 / ПОЗА ПІДРУЧНИКАМИ</p>
-              <h2>Тут є що згадати.</h2>
+              <h2 class="life-header">Тут є що згадати.</h2>
             </div>
-            <p class="second-paragraph section-head-text">
+            <p class="second-paragraph section-head-text life-paragraph">
               Щодня — щось більше, ніж розклад уроків.
             </p>
           </div>
-          <ul>
+          <ul class="life-cards">
             <li>
-              <img src="School.images/life.jpg" alt="Учні збирають робота" />
-              <p>ДОСЛІДЖЕННЯ ТА ІДЕЇ</p>
-              <h3>Від ідеї до першого робота</h3>
+              <img
+                class="life-image"
+                src="School.images/life.jpg"
+                alt="Учні збирають робота"
+              />
+              <p class="life-card-header">ДОСЛІДЖЕННЯ ТА ІДЕЇ</p>
+              <h3 class="life-card-main-header">Від ідеї до першого робота</h3>
             </li>
             <li>
               <img
+                class="life-image"
                 src="School.images/sport.jpg"
                 alt="Учні грають в баскетбол"
               />
-              <p>РУХ ТА КОМАНДА</p>
-              <h3>Разом — на майданчику й у житті</h3>
+              <p class="life-card-header">РУХ ТА КОМАНДА</p>
+              <h3 class="life-card-main-header">
+                Разом — на майданчику й у житті
+              </h3>
             </li>
           </ul>
         </div>
       </section>
 
       <section id="meet-section">
-        <div class="container">
-          <p class="paragraph">05 / ПОЧНЕМО ЗІ ЗНАЙОМСТВА</p>
-          <h2>Твоє майбутнє має свій початок.</h2>
-          <p>
-            Завітайте до ліцею, познайомтеся з простором і людьми. Великі
-            рішення починаються з розмови.
-          </p>
-          <form action="#">
-            <label for="name">Ваше ім’я</label>
+        <div class="main-meet-flex">
+          <div class="meet-container">
+            <p class="paragraph lime">05 / ПОЧНЕМО ЗІ ЗНАЙОМСТВА</p>
+            <h2 class="meet-header">Твоє майбутнє має свій початок.</h2>
+            <p class="meet-paragraph">
+              Завітайте до ліцею, познайомтеся з простором <br />і людьми.
+              Великі рішення починаються з розмови.
+            </p>
+          </div>
+          <form class="form-meet" caaction="#">
+            <label class="input-text" for="name">Ваше ім’я</label>
             <input
+              class="meet-input"
               type="text"
               id="name"
               name="name"
               autocomplete="name"
               required
             />
-            <label for="phone">Номер телефону</label>
+            <label class="input-text" for="phone">Номер телефону</label>
             <input
+              class="meet-input"
               type="tel"
               id="phone"
               name="phone"
               autocomplete="tel"
               required
             />
-            <button type="submit">Домовитися про знайомство</button>
-            <p>
+            <button class="meet-button" type="submit">
+              Домовитися про знайомство
+            </button>
+            <p class="meet-last-paragraph">
               Натискаючи кнопку, ви погоджуєтеся на обробку контактних даних для
               відповіді на звернення.
             </p>
