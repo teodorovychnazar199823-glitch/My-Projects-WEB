@@ -391,9 +391,16 @@ a:hover {
 .form-meet {
   display: flex;
   flex-direction: column;
-  padding: 72px 80px 72px 0px;
+  padding: 72px 80px 0px 0px;
   min-width: 510px;
 }
+
+.meet-input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--color-main-green) inset;
+  -webkit-text-fill-color: var(--color-main-light);
+  caret-color: var(--color-main-light);
+}
+
 .lime {
   color: var(--color-main-lime);
 }
@@ -436,7 +443,7 @@ a:hover {
   padding: 15px 20px;
   border-radius: 6px;
   border-style: none;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   margin-top: 6px;
   line-height: 1.57;
   font-size: 14px;
@@ -453,7 +460,15 @@ a:hover {
   border-bottom: 1px solid
     color-mix(in srgb, var(--color-main-light) 30%, transparent);
   margin-bottom: 24px;
+  caret-color: var(--color-main-light);
+  padding: 12px 0;
 }
+
+.meet-input:focus {
+  outline: none;
+  border-bottom-color: var(--color-main-lime);
+}
+
 .footer-container {
   min-width: 100%;
   background-color: var(--color-main-green);
