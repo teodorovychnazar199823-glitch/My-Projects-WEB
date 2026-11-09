@@ -112,6 +112,7 @@ a:hover {
 .header-list-container {
   display: flex;
   gap: 30px;
+  color: var(--color-main-light);
 }
 
 .header-button {
@@ -452,4 +453,76 @@ a:hover {
   border-bottom: 1px solid
     color-mix(in srgb, var(--color-main-light) 30%, transparent);
   margin-bottom: 24px;
+}
+.footer-container {
+  min-width: 100%;
+  background-color: var(--color-main-green);
+  margin-top: 32px;
+  min-height: 331px;
+  color: var(--color-main-light);
+}
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1216px;
+  max-height: 140px;
+}
+.footer-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-list-items {
+  color: var(--color-main-light);
+}
+.footer-text {
+  line-height: 1.7;
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+.adress-footer {
+  font-style: normal;
+}
+.address-text {
+  max-height: 140px;
+  max-width: 344px;
+}
+.footer-name {
+  font-family: Lora, serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.city {
+  font-size: 15px;
+  font-weight: 600;
+}
+.footer-meet {
+  color: var(--color-main-lime);
+  line-height: 1.4;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+}
+.footer-second-container {
+  max-width: 1264px;
+  padding-top: 58px;
+  padding-bottom: 32px;
+  margin: 0 auto;
+}
+.footer-flex img {
+  filter: brightness(0) invert(1);
+}
+.logo-text {
+  margin-top: 18px;
+}
+.footer-border-text {
+  font-size: 10px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-top: 44px;
+  padding-top: 44px;
+  border-top: 1px solid var(--color-main-line);
 }
