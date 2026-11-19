@@ -22,5 +22,9 @@
 <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M1.6 29.6l28-28M29.6 29.6v-28h-28"></path>
 </symbol>
 
+<symbol id="icon-headphones" viewBox="0 0 37 32">
+<path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6947" d="M4.716 19.874v-5.053c0-3.573 1.42-7.001 3.946-9.527s5.954-3.946 9.527-3.946c3.574 0 7.001 1.42 9.527 3.946s3.946 5.954 3.946 9.527v5.053M4.716 16.505h5.053v13.474h-5.053c-0.893 0-1.75-0.355-2.382-0.986s-0.987-1.488-0.987-2.382v-6.737c0-0.893 0.355-1.75 0.987-2.382s1.488-0.987 2.382-0.987zM31.663 16.505h-5.053v13.474h5.053c0.893 0 1.75-0.355 2.382-0.986s0.986-1.488 0.986-2.382v-6.737c0-0.893-0.355-1.75-0.986-2.382s-1.489-0.987-2.382-0.987z"></path>
+</symbol>
+ 
 </defs>
 </svg>
