@@ -1,0 +1,60 @@
+@use "mixin";
+
+.choose {
+  &-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    &-flex {
+      display: flex;
+      padding: 48px 0 0 0;
+      justify-content: space-between;
+      margin: 0;
+    }
+
+    &-card-container {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &-img {
+    border-radius: 16px;
+  }
+
+  &-card {
+    &-title {
+      @include mixin.text(24px, 600, 1.33);
+    }
+
+    &-forwhat {
+      @include mixin.text(16px, 400, 1.5);
+    }
+
+    &-places {
+      @include mixin.text(14px, 400, 1.71);
+    }
+
+    &-price {
+      @include mixin.text(16px, 600, 1.5, var(--color-text-main));
+    }
+  }
+
+  &-icon {
+    height: 14px;
+    width: 14px;
+    fill: var(--color-button);
+
+    &-wrap {
+      @include mixin.circle-icon(
+        48px,
+        transparent,
+        1px solid color-mix(in srgb, var(--color-muted), transparent 70%)
+      );
+    }
+  }
+}

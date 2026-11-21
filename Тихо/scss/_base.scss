@@ -1,0 +1,37 @@
+:root {
+  --color-background: #f6f4ee;
+  --color-text-main: #202d27;
+  --color-button: #294d3c;
+  --color-muted: #616a62;
+  --color-paper: #f6f4ee;
+}
+body {
+  background-color: var(--color-background);
+  font-family: Manrope, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-main);
+}
+
+p {
+  color: var(--color-muted);
+}

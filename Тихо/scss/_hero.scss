@@ -1,0 +1,51 @@
+@use "mixin";
+
+.hero {
+  margin-top: 48px;
+  margin-bottom: 32px;
+
+  &-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 64px;
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+    max-height: 160px;
+    margin-bottom: 32px;
+  }
+
+  &-img {
+    border-radius: 16px;
+    min-width: 1200px;
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  &-title {
+    font-family: Lora, serif;
+    @include mixin.text(72px, 400, 1.11, var(--color-text-main));
+  }
+
+  &-second-text {
+    max-width: 384px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-desc {
+    @include mixin.text(20px, 400, 1.6, var(--color-muted));
+  }
+
+  &-button-first {
+    @include mixin.text(16px, 600, 24px, white);
+    background-color: var(--color-button);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    max-width: 203px;
+  }
+}

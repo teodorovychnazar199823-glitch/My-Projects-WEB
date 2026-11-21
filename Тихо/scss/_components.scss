@@ -1,0 +1,25 @@
+@use "mixin";
+
+.eyebrow {
+  @include mixin.text(12px, 700, 1.33);
+  text-transform: uppercase;
+}
+
+.section-header {
+  font-family: Lora, serif;
+  @include mixin.text(48px, 400, 1.16);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

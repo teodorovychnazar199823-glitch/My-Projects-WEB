@@ -1,0 +1,75 @@
+@use "mixin";
+
+.tariffs {
+  &-section {
+    max-width: 1200px;
+    margin: 96px auto;
+
+    &-paragraph {
+      @include mixin.text(16px, 400, 1.5, var(--color-muted));
+    }
+    &-about {
+      @include mixin.text(14px, 400, 1.71, var(--color-muted));
+    }
+  }
+
+  &-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    margin-top: 48px;
+    margin-bottom: 16px;
+
+    // 1. база для всіх клітинок
+    :where(td, th) {
+      padding: 20px 18px;
+      text-align: left;
+      vertical-align: middle;
+      border-bottom: 1px solid
+        color-mix(in srgb, var(--color-muted) 30%, transparent);
+      @include mixin.text(16px, 400, 1.5, var(--color-text-main));
+    }
+
+    // 2. шапка
+    :where(thead th) {
+      font-weight: 600;
+      border-bottom-color: var(--color-text-main);
+    }
+
+    // 3. назви рядків (Вартість, Доступ...)
+    :where(tbody th) {
+      @include mixin.text(14px, 400, 1.71, var(--color-muted));
+    }
+
+    // 4. класи-модифікатори — завжди в самому низу
+    &-price {
+      font-weight: 600;
+      &.marked {
+        background-color: white;
+      }
+    }
+
+    &-marked {
+      background-color: white;
+    }
+
+    &-green {
+      background-color: var(--color-button);
+      border-radius: 8px 8px 0 0;
+      color: var(--color-paper);
+    }
+    &-most {
+      &-popular {
+        background-color: var(--color-paper);
+        @include mixin.text(12px, 700, 1.33, var(--color-button));
+        border-radius: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        max-width: 150px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

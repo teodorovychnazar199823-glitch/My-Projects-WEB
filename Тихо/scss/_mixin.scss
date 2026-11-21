@@ -1,0 +1,20 @@
+//Кружок з іконкою по центру
+@mixin circle-icon($size, $bg, $border: none) {
+  width: $size;
+  height: $size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: $bg;
+  border: $border;
+  border-radius: 50%;
+}
+
+// Текст: розмір, жирність, міжрядковий, колір
+@mixin text($size, $weight, $lh, $color: null) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+  color: $color;
+}

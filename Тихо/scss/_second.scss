@@ -1,0 +1,38 @@
+@use "mixin";
+
+.second-section {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 48px;
+    border-top: 1px solid
+      color-mix(in srgb, var(--color-muted) 30%, transparent);
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--color-muted) 30%, transparent);
+  }
+
+  &-cards {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  &-icons {
+    height: 24px;
+    width: 24px;
+    fill: var(--color-button);
+  }
+
+  &-titles {
+    @include mixin.text(16px, 600, 1.5, var(--color-text-main));
+  }
+
+  &-text {
+    @include mixin.text(14px, 400, 24px, var(--color-muted));
+  }
+}

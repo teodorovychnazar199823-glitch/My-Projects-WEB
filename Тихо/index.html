@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <header>
@@ -192,59 +192,64 @@
         </div>
       </section>
 
-      <section>
+      <section class="tariffs-section">
         <p class="eyebrow">03 / Прості тарифи</p>
         <h2 class="section-header">Твій час. Твій формат.</h2>
-        <p>Без абонементу й зайвих умов. Обери те, що потрібно сьогодні.</p>
-        <table>
+        <p class="tariffs-section-paragraph">
+          Без абонементу й зайвих умов. Обери те, що потрібно сьогодні.
+        </p>
+        <table class="tariffs-table">
           <thead>
             <tr>
               <th></th>
-              <th>Читальня</th>
-              <th>Робочий день</th>
-              <th>Зустріч</th>
+              <th scope="col">Читальня</th>
+              <th scope="col" class="tariffs-table-green">
+                <p class="tariffs-table-most-popular">Найпопулярніше</p>
+                Робочий день
+              </th>
+              <th scope="col">Зустріч</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th>Вартість</th>
-              <td>150 ₴ / день</td>
-              <td>250 ₴ / день</td>
-              <td>350 ₴ / год</td>
+              <td class="tariffs-table-price">150 ₴ / день</td>
+              <td class="tariffs-table-price marked">250 ₴ / день</td>
+              <td class="tariffs-table-price">350 ₴ / год</td>
             </tr>
             <tr>
               <th>Доступ</th>
               <td>08:00–21:00</td>
-              <td>08:00–21:00</td>
+              <td class="tariffs-table-marked">08:00–21:00</td>
               <td>За бронюванням</td>
             </tr>
             <tr>
               <th>Кава й чай</th>
               <td>Включено</td>
-              <td>Включено</td>
+              <td class="tariffs-table-marked">Включено</td>
               <td>Включено</td>
             </tr>
             <tr>
               <th>Швидкий Wi-Fi</th>
               <td>Так</td>
-              <td>Так</td>
+              <td class="tariffs-table-marked">Так</td>
               <td>Так</td>
             </tr>
             <tr>
               <th>Окремий простір</th>
               <td>Ні</td>
-              <td>Ні</td>
+              <td class="tariffs-table-marked">Ні</td>
               <td>До 6 людей</td>
             </tr>
             <tr>
               <th>Для кого</th>
               <td>Для себе</td>
-              <td>Для фокусу</td>
+              <td class="tariffs-table-marked">Для фокусу</td>
               <td>Для команди</td>
             </tr>
           </tbody>
         </table>
-        <p>
+        <p class="table-section-about">
           Усі ціни демонстраційні. Місце можна забронювати через форму нижче.
         </p>
       </section>
