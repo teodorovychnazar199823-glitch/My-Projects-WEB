@@ -3,57 +3,214 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Мої проєкти</title>
+    <title>Назар · Мої проєкти</title>
+    <meta name="description" content="Сайти, які я зробив: верстка, дизайн, деплой." />
     <style>
-      :root { color-scheme: light dark; }
+      /* ===== 1. Кольори як змінні: світла тема за замовчуванням ===== */
+      :root {
+        color-scheme: light dark;
+        --bg: #f2f2f7;               /* фон як в iOS */
+        --text: #1c1c1e;
+        --muted: rgba(60, 60, 67, 0.65);
+        --glass: rgba(255, 255, 255, 0.55);        /* напівпрозора «скляна» заливка */
+        --glass-border: rgba(255, 255, 255, 0.8);
+        --shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        --blob-1: #7aa7ff;
+        --blob-2: #ff8fc7;
+        --blob-3: #8ef0c9;
+        --radius: 28px;
+      }
+
+      /* ===== 2. Темна тема: просто перевизначаємо ті самі змінні ===== */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #000;
+          --text: #f5f5f7;
+          --muted: rgba(235, 235, 245, 0.6);
+          --glass: rgba(44, 44, 46, 0.45);
+          --glass-border: rgba(255, 255, 255, 0.14);
+          --shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+          --blob-1: #2f5bff;
+          --blob-2: #b0307a;
+          --blob-3: #15a37a;
+        }
+      }
+
+      * { box-sizing: border-box; }
+
       body {
         margin: 0;
         min-height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ===== 3. Кольорові плями позаду: саме їх «розмиває» скло ===== */
+      .blobs {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        filter: blur(80px);
+        opacity: 0.7;
+      }
+      .blobs span {
+        position: absolute;
+        width: 45vmax;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        animation: float 18s ease-in-out infinite alternate;
+      }
+      .blobs span:nth-child(1) { background: var(--blob-1); top: -15%; left: -10%; }
+      .blobs span:nth-child(2) { background: var(--blob-2); bottom: -20%; right: -10%; animation-delay: -6s; }
+      .blobs span:nth-child(3) { background: var(--blob-3); top: 35%; left: 40%; width: 30vmax; animation-delay: -12s; }
+
+      @keyframes float {
+        to { transform: translate(8vw, 6vh) scale(1.15); }
+      }
+
+      /* ===== 4. Головне: «скло» = напівпрозорий фон + backdrop-filter ===== */
+      .glass {
+        background: var(--glass);
+        backdrop-filter: blur(24px) saturate(180%);
+        -webkit-backdrop-filter: blur(24px) saturate(180%); /* для Safari/iPhone */
+        border: 1px solid var(--glass-border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      main {
+        width: min(100% - 32px, 980px);
+        margin: 0 auto;
+        padding: 72px 0 48px;
+      }
+
+      /* ===== 5. Шапка ===== */
+      header { text-align: center; margin-bottom: 56px; }
+
+      .badge {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        color: var(--muted);
+        border-radius: 999px;   /* «пігулка» */
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: clamp(2.6rem, 7vw, 4.5rem);  /* розмір росте з шириною екрана */
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+        margin: 0 0 16px;
+      }
+
+      header p {
+        font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+        color: var(--muted);
+        margin: 0 auto;
+        max-width: 34ch;
+      }
+
+      /* ===== 6. Сітка карток: на телефоні 1 колонка, на компі 2 ===== */
+      .grid {
+        list-style: none;
+        padding: 0;
+        margin: 0;
         display: grid;
-        place-items: center;
-        font-family: system-ui, sans-serif;
-        background: #f4f1ec;
-        color: #1d1d1b;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+        gap: 24px;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #161614; color: #ecebe6; }
-        a { background: #23231f; border-color: #3a3a34; }
-      }
-      main { width: min(100% - 32px, 520px); }
-      h1 { font-size: 2rem; margin: 0 0 1.5rem; }
-      ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-      a {
+
+      .card {
         display: block;
-        padding: 18px 20px;
-        border: 1px solid #d9d4ca;
-        border-radius: 12px;
-        background: #fff;
+        padding: 12px;
         color: inherit;
         text-decoration: none;
-        transition: transform 0.15s;
+        transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s;
       }
-      a:hover { transform: translateY(-2px); }
-      a strong { display: block; font-size: 1.15rem; }
-      a span { opacity: 0.7; font-size: 0.95rem; }
+      .card:hover,
+      .card:focus-visible {
+        transform: translateY(-6px) scale(1.01);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
+      }
+      .card:focus-visible { outline: 3px solid var(--blob-1); outline-offset: 4px; }
+
+      .card img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        border-radius: calc(var(--radius) - 12px); /* внутрішній радіус = зовнішній − відступ */
+        transition: transform 0.6s;
+      }
+      .card:hover img { transform: scale(1.02); }
+
+      .card-body { padding: 18px 10px 8px; }
+      .card h2 { font-size: 1.5rem; letter-spacing: -0.02em; margin: 0 0 6px; }
+      .card p { margin: 0 0 14px; color: var(--muted); }
+
+      .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+      .tags span {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+        border-radius: 999px;
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-top: 56px;
+      }
+      footer a { color: inherit; }
+
+      /* Людям, яким рух заважає, вимикаємо анімації */
+      @media (prefers-reduced-motion: reduce) {
+        .blobs span { animation: none; }
+        .card, .card img { transition: none; }
+      }
     </style>
   </head>
   <body>
+    <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+
     <main>
-      <h1>Мої проєкти</h1>
-      <ul>
+      <header>
+        <span class="badge glass">Веб-розробка · дизайн · деплой</span>
+        <h1>Мої проєкти</h1>
+        <p>Сайти, які я зробив від макета до публікації.</p>
+      </header>
+
+      <ul class="grid">
         <li>
-          <a href="tyho/">
-            <strong>Тихо</strong>
-            <span>Коворкінг і читальня · Львів</span>
+          <a class="card glass" href="tyho/">
+            <img src="tyho/tyho.images/tykho-workspace.jpg" alt="Простір коворкінгу «Тихо»" loading="lazy" />
+            <div class="card-body">
+              <h2>Тихо</h2>
+              <p>Коворкінг і читальня у Львові</p>
+              <div class="tags"><span>HTML</span><span>SCSS</span><span>Flexbox</span></div>
+            </div>
           </a>
         </li>
         <li>
-          <a href="licey/">
-            <strong>Інтелект</strong>
-            <span>Сайт Львівського ліцею</span>
+          <a class="card glass" href="licey/">
+            <img src="licey/School.images/hero.jpg" alt="Будівля ліцею «Інтелект»" loading="lazy" />
+            <div class="card-body">
+              <h2>Інтелект</h2>
+              <p>Сайт Львівського ліцею</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>Flexbox</span></div>
+            </div>
           </a>
         </li>
       </ul>
+
+      <footer>
+        <a href="https://github.com/teodorovychnazar199823-glitch">GitHub</a>
+      </footer>
     </main>
   </body>
 </html>
