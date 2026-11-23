@@ -1,0 +1,65 @@
+@use "../utils/mixin";
+
+.events {
+  max-width: 1200px;
+  margin: 96px auto;
+
+  &__list {
+    margin-top: 48px;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    min-height: 161px;
+    gap: 24px;
+    align-items: center;
+    border-top: 1px solid
+      color-mix(in srgb, var(--color-muted) 50%, transparent);
+
+    &--last {
+      border-bottom: 1px solid
+        color-mix(in srgb, var(--color-muted) 50%, transparent);
+    }
+  }
+
+  &__date {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--color-button);
+    min-width: 180px;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--color-text-main);
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--color-muted);
+  }
+
+  &__icon-wrap {
+    @include mixin.circle-icon(
+      48px,
+      transparent,
+      1px solid color-mix(in srgb, var(--color-muted) 50%, transparent)
+    );
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    color: var(--color-button);
+  }
+
+  &__content {
+    flex: 1;
+  }
+}

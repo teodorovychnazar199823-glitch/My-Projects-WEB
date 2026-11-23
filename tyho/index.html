@@ -166,7 +166,9 @@
           </div>
           <div class="about__content">
             <p class="eyebrow about__eyebrow">02 / Менше шуму</p>
-            <h2 class="section-title about__title">Тут є місце для головного.</h2>
+            <h2 class="section-title about__title">
+              Тут є місце для головного.
+            </h2>
             <p class="about__text">
               Ми створили ТИХО, щоб у міста з’явилась пауза. Приходь із <br />
               ноутбуком, книжкою чи новою ідеєю — про решту ми подбаємо.
@@ -208,7 +210,11 @@
             <tr>
               <th>Вартість</th>
               <td class="pricing__cell pricing__cell--price">150 ₴ / день</td>
-              <td class="pricing__cell pricing__cell--price pricing__cell--featured">250 ₴ / день</td>
+              <td
+                class="pricing__cell pricing__cell--price pricing__cell--featured"
+              >
+                250 ₴ / день
+              </td>
               <td class="pricing__cell pricing__cell--price">350 ₴ / год</td>
             </tr>
             <tr>
@@ -248,26 +254,36 @@
         </p>
       </section>
 
-      <section id="events">
+      <section class="events" id="events">
         <p class="eyebrow">04 / Зустрінемося наживо</p>
-        <h2>Події без зайвого шуму</h2>
-        <ul>
-          <li>
-            <p>21 / 11</p>
-            <h3>Книжковий клуб: історії, що лишаються</h3>
-            <p>Субота · 18:30 · Читальня</p>
-            <svg class="tst">
-              <use href="icons.svg#icon-arrow"></use>
-            </svg>
+        <h2 class="section-title">Події без зайвого шуму</h2>
+        <ul class="events__list">
+          <li class="events__item">
+            <p class="events__date">21 / 11</p>
+            <div class="events__content">
+              <h3 class="events__subtitle">
+                Книжковий клуб: історії, що лишаються
+              </h3>
+              <p class="events__text">Субота · 18:30 · Читальня</p>
+            </div>
+            <span class="events__icon-wrap">
+              <svg class="events__icon">
+                <use href="icons.svg#icon-arrow"></use>
+              </svg>
+            </span>
           </li>
 
-          <li>
-            <p>28 / 11</p>
-            <h3>Ранок для власного проєкту</h3>
-            <p>Субота · 10:00 · Робоча зала</p>
-            <svg class="tst">
-              <use href="icons.svg#icon-arrow"></use>
-            </svg>
+          <li class="events__item events__item--last">
+            <p class="events__date">28 / 11</p>
+            <div class="events__content">
+              <h3 class="events__subtitle">Ранок для власного проєкту</h3>
+              <p class="events__text">Субота · 10:00 · Робоча зала</p>
+            </div>
+            <span class="events__icon-wrap">
+              <svg class="events__icon">
+                <use href="icons.svg#icon-arrow"></use>
+              </svg>
+            </span>
           </li>
         </ul>
       </section>
