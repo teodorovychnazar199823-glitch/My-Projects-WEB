@@ -1,0 +1,7 @@
+@use "../utils/mixin";
+
+// Дрібний напис над заголовком секції: «01 / ОБИРАЙ СВІЙ ФОРМАТ»
+.eyebrow {
+  @include mixin.text(12px, 700, 1.33);
+  text-transform: uppercase;
+}

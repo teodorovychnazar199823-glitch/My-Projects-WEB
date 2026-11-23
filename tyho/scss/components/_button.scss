@@ -1,0 +1,13 @@
+@use "../utils/mixin";
+
+// Зелена кнопка «Забронювати місце». Відступи й ширину задає секція: class="button hero__button"
+.button {
+  @include mixin.text(16px, 600, 1.5, white);
+  background-color: var(--color-button);
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

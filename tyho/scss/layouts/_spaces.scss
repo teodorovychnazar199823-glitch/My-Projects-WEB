@@ -1,37 +1,27 @@
-@use "mixin";
+@use "../utils/mixin";
 
-.choose {
-  &-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 96px;
-    padding-bottom: 96px;
+.spaces {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 96px;
+  padding-bottom: 96px;
 
-    &-flex {
-      display: flex;
-      padding: 48px 0 0 0;
-      justify-content: space-between;
-      margin: 0;
-    }
-
-    &-card-container {
-      margin-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  &__list {
+    display: flex;
+    padding: 48px 0 0 0;
+    justify-content: space-between;
+    margin: 0;
   }
-
-  &-img {
+  &__img {
     border-radius: 16px;
   }
 
-  &-card {
+  &__card {
     &-title {
       @include mixin.text(24px, 600, 1.33);
     }
 
-    &-forwhat {
+    &-desc {
       @include mixin.text(16px, 400, 1.5);
     }
 
@@ -42,9 +32,16 @@
     &-price {
       @include mixin.text(16px, 600, 1.5, var(--color-text-main));
     }
+
+    &-container {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
-  &-icon {
+  &__icon {
     height: 14px;
     width: 14px;
     fill: var(--color-button);

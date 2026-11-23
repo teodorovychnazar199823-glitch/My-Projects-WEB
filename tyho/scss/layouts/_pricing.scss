@@ -1,0 +1,74 @@
+@use "../utils/mixin";
+
+// Секція «03 / Прості тарифи»: таблиця з виділеною колонкою «Робочий день»
+.pricing {
+  max-width: 1200px;
+  margin: 96px auto;
+
+  &__text {
+    @include mixin.text(16px, 400, 1.5, var(--color-muted));
+  }
+
+  &__note {
+    @include mixin.text(14px, 400, 1.71, var(--color-muted));
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    margin-top: 48px;
+    margin-bottom: 16px;
+
+    // база для всіх клітинок
+    :where(td, th) {
+      padding: 20px 18px;
+      text-align: left;
+      vertical-align: middle;
+      border-bottom: 1px solid
+        color-mix(in srgb, var(--color-muted) 30%, transparent);
+      @include mixin.text(16px, 400, 1.5, var(--color-text-main));
+    }
+
+    // шапка
+    :where(thead th) {
+      font-weight: 600;
+      border-bottom-color: var(--color-text-main);
+    }
+
+    // назви рядків (Вартість, Доступ...)
+    :where(tbody th) {
+      @include mixin.text(14px, 400, 1.71, var(--color-muted));
+    }
+  }
+
+  // модифікатори — після &__table, щоб перебивали базу
+  &__head--featured {
+    background-color: var(--color-button);
+    border-radius: 8px 8px 0 0;
+    color: var(--color-paper);
+  }
+
+  &__cell {
+    &--price {
+      font-weight: 600;
+    }
+
+    &--featured {
+      background-color: white;
+    }
+  }
+
+  // плашка «Найпопулярніше»
+  &__badge {
+    background-color: var(--color-paper);
+    @include mixin.text(12px, 700, 1.33, var(--color-button));
+    border-radius: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    max-width: 150px;
+    margin-bottom: 8px;
+  }
+}

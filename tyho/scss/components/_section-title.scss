@@ -1,0 +1,9 @@
+@use "../utils/mixin";
+
+// Великий заголовок секції (h2)
+.section-title {
+  font-family: Lora, serif;
+  @include mixin.text(48px, 400, 1.16);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}

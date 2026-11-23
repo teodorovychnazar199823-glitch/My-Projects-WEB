@@ -1,7 +1,7 @@
-@use "mixin";
+@use "../utils/mixin";
 
 .header {
-  &-flex {
+  &__inner {
     padding-left: 120px;
     padding-right: 120px;
     display: flex;
@@ -11,36 +11,25 @@
     min-height: 80px;
   }
 
-  &-class {
+  &__menu {
     display: flex;
     gap: 32px;
     justify-content: center;
     padding: 0;
   }
 
-  &-logo {
+  &__logo {
     height: 32px;
     width: 61px;
-    flex: 1;
   }
 
-  &-link {
+  &__link {
     @include mixin.text(16px, 400, 1.5, var(--color-text-main));
     text-decoration: none;
   }
 
-  &-button {
-    @include mixin.text(16px, 600, 1.5, white);
-    background-color: var(--color-button);
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  &-nav {
+  &__nav {
     display: flex;
     gap: 32px;
   }

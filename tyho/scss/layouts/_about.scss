@@ -1,0 +1,78 @@
+@use "../utils/mixin";
+
+// Секція «02 / Менше шуму»: фото + текст про простір + кнопка-плеєр
+.about {
+  background-color: var(--color-button);
+
+  &__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 96px 0px;
+    justify-content: space-between;
+  }
+
+  &__img {
+    max-width: 588px;
+    max-height: 448px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  &__content {
+    padding: 64px 46px 64px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  // на темному фоні eyebrow і заголовок світлі
+  &__eyebrow,
+  &__title {
+    color: var(--color-paper);
+  }
+
+  &__text {
+    @include mixin.text(16px, 400, 1.5, var(--color-paper));
+  }
+
+  // кнопка «Послухай атмосферу»
+  &__player {
+    display: flex;
+    border-radius: 8px;
+    border-style: none;
+    align-items: center;
+    padding: 16px;
+    max-height: 80px;
+    min-width: 486px;
+    background-color: var(--color-button);
+    gap: 16px;
+
+    &:hover {
+      background-color: var(--color-text-main);
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &-title {
+      @include mixin.text(16px, 600, 1.5, var(--color-paper));
+    }
+
+    &-time {
+      @include mixin.text(14px, 400, 1.71, var(--color-paper));
+    }
+  }
+
+  &__icon-wrap {
+    @include mixin.circle-icon(48px, var(--color-background));
+  }
+
+  &__icon {
+    height: 17px;
+    width: 20px;
+  }
+}

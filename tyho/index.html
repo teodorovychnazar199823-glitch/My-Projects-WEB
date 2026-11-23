@@ -13,78 +13,72 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <header>
-      <div class="header-flex">
-        <div class="header-logo-position">
-          <svg class="header-logo">
-            <use href="icons.svg#icon-logo"></use>
-          </svg>
-        </div>
-        <div class="header-nav">
+    <header class="header">
+      <div class="header__inner">
+        <svg class="header__logo">
+          <use href="icons.svg#icon-logo"></use>
+        </svg>
+        <div class="header__nav">
           <nav>
-            <ul class="header-class">
-              <li><a class="header-link" href="#scenes">Простори</a></li>
-              <li><a class="header-link" href="#pricing">Тарифи</a></li>
-              <li><a class="header-link" href="#events">Події</a></li>
-              <li><a class="header-link" href="#contacts">Контакти</a></li>
+            <ul class="header__menu">
+              <li><a class="header__link" href="#scenes">Простори</a></li>
+              <li><a class="header__link" href="#pricing">Тарифи</a></li>
+              <li><a class="header__link" href="#events">Події</a></li>
+              <li><a class="header__link" href="#contacts">Контакти</a></li>
             </ul>
           </nav>
-          <a class="header-button" href="">Забронювати місце</a>
+          <a class="button header__button" href="">Забронювати місце</a>
         </div>
       </div>
     </header>
     <main>
-      <section class="hero-section">
-        <p class="eyebrow hero">Коворкінг і читальня · Львів</p>
-        <div class="hero-flex">
-          <h1 class="hero-title">Твій простір. <br />Твій спокійний ритм.</h1>
-          <div class="hero-second-text">
-            <p class="hero-desc">
+      <section class="hero">
+        <p class="eyebrow hero__eyebrow">Коворкінг і читальня · Львів</p>
+        <div class="hero__inner">
+          <h1 class="hero__title">Твій простір. <br />Твій спокійний ритм.</h1>
+          <div class="hero__content">
+            <p class="hero__text">
               Працюй зосереджено. Читай неквапно. Знайди своє місце у центрі
               міста.
             </p>
-            <a class="hero-button-first" href="">Забронювати місце</a>
+            <a class="button hero__button" href="">Забронювати місце</a>
           </div>
         </div>
         <img
-          class="hero-img"
+          class="hero__img"
           src="tyho.images/tykho-workspace.jpg"
           alt="Простір зі столом і книгами на фоні Львова"
         />
       </section>
 
-      <section class="second-section">
-        <h2 class="hidden">Що ми пропонуємо?</h2>
-        <ul class="second-section-flex">
-          <li class="second-section-cards">
-            <svg class="second-section-icons">
+      <section class="benefits">
+        <h2 class="visually-hidden">Що ми пропонуємо?</h2>
+        <ul class="benefits__list">
+          <li class="benefits__card">
+            <svg class="benefits__icon">
               <use href="icons.svg#icon-connection"></use>
             </svg>
             <div>
-              <h3 class="second-section-titles">Залишайся на зв’язку</h3>
-              <p class="second-section-text">
-                Швидкий інтернет і розетки поруч.
-              </p>
+              <h3 class="benefits__subtitle">Залишайся на зв’язку</h3>
+              <p class="benefits__desc">Швидкий інтернет і розетки поруч.</p>
             </div>
           </li>
-          <li class="second-section-cards">
-            <svg class="second-section-icons">
+          <li class="benefits__card">
+            <svg class="benefits__icon">
               <use href="icons.svg#icon-coffee"></use>
             </svg>
             <div>
-              <h3 class="second-section-titles">Кава у твоєму ритмі</h3>
-              <p class="second-section-text">
-                Фільтр, чай і вода завжди під рукою.
-              </p>
+              <h3 class="benefits__subtitle">Кава у твоєму ритмі</h3>
+              <p class="benefits__desc">Фільтр, чай і вода завжди під рукою.</p>
             </div>
           </li>
-          <li class="second-section-cards">
-            <svg class="second-section-icons">
+          <li class="benefits__card">
+            <svg class="benefits__icon">
               <use href="icons.svg#icon-light"></use>
             </svg>
             <div>
-              <h3 class="second-section-titles">Більше простору для себе</h3>
-              <p class="second-section-text">
+              <h3 class="benefits__subtitle">Більше простору для себе</h3>
+              <p class="benefits__desc">
                 Денне світло, книги й повага до тиші.
               </p>
             </div>
@@ -92,26 +86,26 @@
         </ul>
       </section>
 
-      <section class="choose-section">
+      <section class="spaces" id="scenes">
         <p class="eyebrow">01 / Обирай свій формат</p>
-        <h2 class="section-header">
+        <h2 class="section-title">
           Для роботи. <br />Для себе. Для зустрічей.
         </h2>
-        <ul class="choose-section-flex">
+        <ul class="spaces__list">
           <li>
             <div>
               <img
-                class="choose-img"
+                class="spaces__img"
                 src="tyho.images/working.jpg"
                 alt="Робоча зала"
               />
-              <h3 class="choose-card-title">Робоча зала</h3>
-              <p class="choose-card-forwhat">Для фокусу й великих ідей.</p>
-              <p class="choose-card-places">24 місця · тиха зона</p>
-              <div class="choose-section-card-container">
-                <p class="choose-card-price">від 250 ₴ / день</p>
-                <span class="choose-icon-wrap">
-                  <svg class="choose-icon">
+              <h3 class="spaces__card-title">Робоча зала</h3>
+              <p class="spaces__card-desc">Для фокусу й великих ідей.</p>
+              <p class="spaces__card-places">24 місця · тиха зона</p>
+              <div class="spaces__card-container">
+                <p class="spaces__card-price">від 250 ₴ / день</p>
+                <span class="spaces__icon-wrap">
+                  <svg class="spaces__icon">
                     <use href="icons.svg#icon-arrow"></use>
                   </svg>
                 </span>
@@ -121,17 +115,17 @@
           <li>
             <div>
               <img
-                class="choose-img"
+                class="spaces__img"
                 src="tyho.images/reading.jpg"
                 alt="Читальня"
               />
-              <h3 class="choose-card-title">Читальня</h3>
-              <p class="choose-card-forwhat">Книга, кава і час для себе.</p>
-              <p class="choose-card-places">12 місць · бібліотека</p>
-              <div class="choose-section-card-container">
-                <p class="choose-card-price">від 150 ₴ / день</p>
-                <span class="choose-icon-wrap">
-                  <svg class="choose-icon">
+              <h3 class="spaces__card-title">Читальня</h3>
+              <p class="spaces__card-desc">Книга, кава і час для себе.</p>
+              <p class="spaces__card-places">12 місць · бібліотека</p>
+              <div class="spaces__card-container">
+                <p class="spaces__card-price">від 150 ₴ / день</p>
+                <span class="spaces__icon-wrap">
+                  <svg class="spaces__icon">
                     <use href="icons.svg#icon-arrow"></use>
                   </svg>
                 </span>
@@ -141,17 +135,17 @@
           <li>
             <div>
               <img
-                class="choose-img"
+                class="spaces__img"
                 src="tyho.images/meeting.jpg"
                 alt="Кімната зустрічей"
               />
-              <h3 class="choose-card-title">Кімната зустрічей</h3>
-              <p class="choose-card-forwhat">Для розмов, які рухають вперед.</p>
-              <p class="choose-card-places">до 6 людей · екран</p>
-              <div class="choose-section-card-container">
-                <p class="choose-card-price">від 350 ₴ / год</p>
-                <span class="choose-icon-wrap">
-                  <svg class="choose-icon">
+              <h3 class="spaces__card-title">Кімната зустрічей</h3>
+              <p class="spaces__card-desc">Для розмов, які рухають вперед.</p>
+              <p class="spaces__card-places">до 6 людей · екран</p>
+              <div class="spaces__card-container">
+                <p class="spaces__card-price">від 350 ₴ / год</p>
+                <span class="spaces__icon-wrap">
+                  <svg class="spaces__icon">
                     <use href="icons.svg#icon-arrow"></use>
                   </svg>
                 </span>
@@ -161,50 +155,50 @@
         </ul>
       </section>
 
-      <section class="noise-section">
-        <div class="less-noise-section">
+      <section class="about">
+        <div class="about__inner">
           <div>
             <img
-              class="noise-image"
+              class="about__img"
               src="tyho.images/tykho-reading.jpg"
               alt=""
             />
           </div>
-          <div class="noise-text-container">
-            <p class="eyebrow noise">02 / Менше шуму</p>
-            <h2 class="section-header noise">Тут є місце для головного.</h2>
-            <p class="noise-section-text">
+          <div class="about__content">
+            <p class="eyebrow about__eyebrow">02 / Менше шуму</p>
+            <h2 class="section-title about__title">Тут є місце для головного.</h2>
+            <p class="about__text">
               Ми створили ТИХО, щоб у міста з’явилась пауза. Приходь із <br />
               ноутбуком, книжкою чи новою ідеєю — про решту ми подбаємо.
             </p>
-            <button class="button-noise">
-              <span class="noise-content-icon">
-                <svg class="noise-icon">
+            <button class="about__player">
+              <span class="about__icon-wrap">
+                <svg class="about__icon">
                   <use href="icons.svg#icon-headphones"></use>
                 </svg>
               </span>
-              <div class="noise-button-container">
-                <p class="noise-text-button">Послухай атмосферу</p>
-                <p class="noise-text-button-time">Звуки ТИХО · 00:32</p>
+              <div class="about__player-content">
+                <p class="about__player-title">Послухай атмосферу</p>
+                <p class="about__player-time">Звуки ТИХО · 00:32</p>
               </div>
             </button>
           </div>
         </div>
       </section>
 
-      <section class="tariffs-section">
+      <section class="pricing" id="pricing">
         <p class="eyebrow">03 / Прості тарифи</p>
-        <h2 class="section-header">Твій час. Твій формат.</h2>
-        <p class="tariffs-section-paragraph">
+        <h2 class="section-title">Твій час. Твій формат.</h2>
+        <p class="pricing__text">
           Без абонементу й зайвих умов. Обери те, що потрібно сьогодні.
         </p>
-        <table class="tariffs-table">
+        <table class="pricing__table">
           <thead>
             <tr>
               <th></th>
               <th scope="col">Читальня</th>
-              <th scope="col" class="tariffs-table-green">
-                <p class="tariffs-table-most-popular">Найпопулярніше</p>
+              <th scope="col" class="pricing__head pricing__head--featured">
+                <p class="pricing__badge">Найпопулярніше</p>
                 Робочий день
               </th>
               <th scope="col">Зустріч</th>
@@ -213,48 +207,48 @@
           <tbody>
             <tr>
               <th>Вартість</th>
-              <td class="tariffs-table-price">150 ₴ / день</td>
-              <td class="tariffs-table-price marked">250 ₴ / день</td>
-              <td class="tariffs-table-price">350 ₴ / год</td>
+              <td class="pricing__cell pricing__cell--price">150 ₴ / день</td>
+              <td class="pricing__cell pricing__cell--price pricing__cell--featured">250 ₴ / день</td>
+              <td class="pricing__cell pricing__cell--price">350 ₴ / год</td>
             </tr>
             <tr>
               <th>Доступ</th>
               <td>08:00–21:00</td>
-              <td class="tariffs-table-marked">08:00–21:00</td>
+              <td class="pricing__cell pricing__cell--featured">08:00–21:00</td>
               <td>За бронюванням</td>
             </tr>
             <tr>
               <th>Кава й чай</th>
               <td>Включено</td>
-              <td class="tariffs-table-marked">Включено</td>
+              <td class="pricing__cell pricing__cell--featured">Включено</td>
               <td>Включено</td>
             </tr>
             <tr>
               <th>Швидкий Wi-Fi</th>
               <td>Так</td>
-              <td class="tariffs-table-marked">Так</td>
+              <td class="pricing__cell pricing__cell--featured">Так</td>
               <td>Так</td>
             </tr>
             <tr>
               <th>Окремий простір</th>
               <td>Ні</td>
-              <td class="tariffs-table-marked">Ні</td>
+              <td class="pricing__cell pricing__cell--featured">Ні</td>
               <td>До 6 людей</td>
             </tr>
             <tr>
               <th>Для кого</th>
               <td>Для себе</td>
-              <td class="tariffs-table-marked">Для фокусу</td>
+              <td class="pricing__cell pricing__cell--featured">Для фокусу</td>
               <td>Для команди</td>
             </tr>
           </tbody>
         </table>
-        <p class="table-section-about">
+        <p class="pricing__note">
           Усі ціни демонстраційні. Місце можна забронювати через форму нижче.
         </p>
       </section>
 
-      <section>
+      <section id="events">
         <p class="eyebrow">04 / Зустрінемося наживо</p>
         <h2>Події без зайвого шуму</h2>
         <ul>
@@ -337,7 +331,7 @@
         </form>
       </section>
 
-      <section>
+      <section id="contacts">
         <p class="eyebrow">06 / Приходь у гості</p>
         <h2>Зустрінемось у центрі міста.</h2>
         <p>Львів · вул. Тиха, 12 Щодня · 08:00–21:00</p>

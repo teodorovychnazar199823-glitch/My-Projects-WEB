@@ -1,8 +1,15 @@
-@use "base";
-@use "components";
-@use "header";
-@use "hero";
-@use "second";
-@use "choose";
-@use "noise";
-@use "tariffs";
+// utils: змінні, міксини (самі CSS не дають)
+// base: скидання, змінні кольорів, body
+// components: маленькі блоки, які повторюються (кнопка, eyebrow, заголовок секції)
+// layouts: великі секції сторінки по черзі зверху вниз
+@use "base/base";
+@use "components/eyebrow";
+@use "components/section-title";
+@use "components/button";
+@use "components/visually-hidden";
+@use "layouts/header";
+@use "layouts/hero";
+@use "layouts/benefits";
+@use "layouts/spaces";
+@use "layouts/about";
+@use "layouts/pricing";
