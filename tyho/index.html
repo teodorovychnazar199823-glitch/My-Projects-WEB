@@ -27,7 +27,7 @@
               <li><a class="header__link" href="#contacts">Контакти</a></li>
             </ul>
           </nav>
-          <a class="button header__button" href="">Забронювати місце</a>
+          <a class="button header__button" href="#booking">Забронювати місце</a>
         </div>
       </div>
     </header>
@@ -41,7 +41,7 @@
               Працюй зосереджено. Читай неквапно. Знайди своє місце у центрі
               міста.
             </p>
-            <a class="button hero__button" href="">Забронювати місце</a>
+            <a class="button hero__button" href="#booking">Забронювати місце</a>
           </div>
         </div>
         <img
@@ -179,10 +179,10 @@
                   <use href="icons.svg#icon-headphones"></use>
                 </svg>
               </span>
-              <div class="about__player-content">
-                <p class="about__player-title">Послухай атмосферу</p>
-                <p class="about__player-time">Звуки ТИХО · 00:32</p>
-              </div>
+              <span class="about__player-content">
+                <span class="about__player-title">Послухай атмосферу</span>
+                <span class="about__player-time">Звуки ТИХО · 00:32</span>
+              </span>
             </button>
           </div>
         </div>
@@ -288,92 +288,158 @@
         </ul>
       </section>
 
-      <section>
-        <p class="eyebrow">05 / Чекаємо на тебе</p>
-        <h2>Залиш собі місце в ТИХО.</h2>
-        <p>
-          Розкажи, коли плануєш прийти. Ми підтвердимо наявність місця листом.
-        </p>
-        <p>Поля з * — обов’язкові. Коментар можна залишити за бажанням.</p>
-        <form action="" method="post">
-          <fieldset>
-            <legend>Контактні дані</legend>
-            <label for="name">Ім'я *</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Як до тебе звертатися?"
-              required
-            />
+      <section class="contact" id="booking">
+        <div class="contact__container">
+          <div class="contact__intro">
+            <p class="eyebrow">05 / Чекаємо на тебе</p>
+            <h2 class="section-title">
+              Залиш собі <br />
+              місце в ТИХО.
+            </h2>
+            <p class="contact__desc">
+              Розкажи, коли плануєш прийти. Ми підтвердимо наявність місця
+              листом.
+            </p>
+            <p class="contact__note">
+              Поля з * — обов’язкові. <br />
+              Коментар можна залишити за бажанням.
+            </p>
+          </div>
 
-            <label for="email">Email *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="you@example.com"
-              required
-            />
-          </fieldset>
+          <form class="contact__form" action="#" method="post">
+            <fieldset class="contact__fieldset">
+              <legend class="contact__legend">Контактні дані</legend>
+              <div class="contact__row">
+                <div class="contact__field">
+                  <label class="contact__label" for="name">Ім’я *</label>
+                  <input
+                    class="contact__input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Як до тебе звертатися?"
+                    required
+                  />
+                </div>
+                <div class="contact__field">
+                  <label class="contact__label" for="email">Email *</label>
+                  <input
+                    class="contact__input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+              </div>
+            </fieldset>
 
-          <fieldset>
-            <legend>Деталі візиту</legend>
-            <label for="format">Формат *</label>
-            <select name="format" id="format" required>
-              <option value="" disabled selected>Обери формат</option>
-              <option value="reading">Читальня</option>
-              <option value="work">Робоча зала</option>
-              <option value="meeting">Переговорна</option>
-            </select>
+            <fieldset class="contact__fieldset">
+              <legend class="contact__legend">Деталі візиту</legend>
+              <div class="contact__row">
+                <div class="contact__field">
+                  <label class="contact__label" for="format">Формат *</label>
+                  <select
+                    class="contact__input contact__select"
+                    id="format"
+                    name="format"
+                    required
+                  >
+                    <option value="" disabled selected>Обери формат</option>
+                    <option value="reading">Читальня</option>
+                    <option value="work">Робоча зала</option>
+                    <option value="meeting">Переговорна</option>
+                  </select>
+                </div>
+                <div class="contact__field">
+                  <label class="contact__label" for="date">Дата візиту *</label>
+                  <input
+                    class="contact__input"
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="contact__field contact__field--comment">
+                <label class="contact__label" for="comment">Коментар</label>
+                <textarea
+                  class="contact__input contact__textarea"
+                  id="comment"
+                  name="comment"
+                  placeholder="Можливо, нам варто щось знати перед твоїм візитом?"
+                ></textarea>
+              </div>
+            </fieldset>
 
-            <label for="date">Дата візиту *</label>
-            <input type="date" name="date" id="date" required />
+            <div class="contact__agree">
+              <input
+                class="contact__checkbox"
+                type="checkbox"
+                id="agree"
+                name="agree"
+                required
+              />
+              <label class="contact__agree-text" for="agree">
+                Погоджуюся на обробку даних для відповіді на мій запит.
+              </label>
+            </div>
 
-            <label for="comment">Коментар</label>
-            <textarea
-              name="comment"
-              id="comment"
-              rows="4"
-              placeholder="Можливо, нам варто щось знати перед твоїм візитом?"
-            ></textarea>
-          </fieldset>
-          <input type="checkbox" id="agree" name="agree" required />
-          <label for="agree"
-            >Погоджуюся на обробку даних для відповіді на мій запит.</label
-          >
-          <button type="submit">Надіслати запит</button>
-          <p>Це запит на бронювання. Оплата на місці після підтвердження.</p>
-        </form>
+            <button class="button contact__button" type="submit">
+              Надіслати запит
+            </button>
+
+            <p class="contact__note">
+              Це запит на бронювання. Оплата на місці після підтвердження.
+            </p>
+          </form>
+        </div>
       </section>
 
-      <section id="contacts">
-        <p class="eyebrow">06 / Приходь у гості</p>
-        <h2>Зустрінемось у центрі міста.</h2>
-        <p>Львів · вул. Тиха, 12 Щодня · 08:00–21:00</p>
-        <address>
-          <a href="mailto:hello@tykho.example">hello@tykho.example</a>
-          <a href="">Instagram</a>
-        </address>
-        <p>Вигадана адреса для навчального проєкту.</p>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1081.9146364683318!2d24.00746016285818!3d49.83792590917448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add786fc71d81%3A0x15ca46d145546194!2z0KHRlNC70LvQvg!5e0!3m2!1suk!2sat!4v1794591286283!5m2!1suk!2sat"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-        ></iframe>
+      <section class="address" id="contacts">
+        <div class="address__container">
+          <div class="address__text">
+            <p class="eyebrow">06 / Приходь у гості</p>
+            <h2 class="section-title">
+              Зустрінемось <br />
+              у центрі міста.
+            </h2>
+            <p class="address__address">
+              Львів · вул. Тиха, 12 <br />
+              Щодня · 08:00–21:00
+            </p>
+            <address class="address__social">
+              <a class="address__link" href="mailto:hello@tykho.example"
+                >hello@tykho.example</a
+              >
+              <a class="address__link" href="#">Instagram</a>
+            </address>
+            <p class="address__note">
+              Вигадана адреса для навчального проєкту.
+            </p>
+          </div>
+          <iframe
+            class="address__map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1081.9146364683318!2d24.00746016285818!3d49.83792590917448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add786fc71d81%3A0x15ca46d145546194!2z0KHRlNC70LvQvg!5e0!3m2!1suk!2sat!4v1794591286283!5m2!1suk!2sat"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <svg>
+    <footer class="footer">
+      <svg class="footer__logo">
         <use href="icons.svg#icon-logo"></use>
       </svg>
-      <p>&copy; 2026 ТИХО. Навчальний проєкт.</p>
-      <a href="">Політика конфіденційності</a>
+      <p class="footer__copyright">&copy; 2026 ТИХО. Навчальний проєкт.</p>
+      <a class="footer__link" href="#">Політика конфіденційності</a>
     </footer>
   </body>
 </html>

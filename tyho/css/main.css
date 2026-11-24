@@ -9,6 +9,7 @@
 body {
   background-color: var(--color-background);
   font-family: Manrope, sans-serif;
+  margin: 0;
 }
 
 * {
@@ -131,8 +132,7 @@ p {
   border-radius: 16px;
   min-width: 1200px;
   max-height: 480px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hero__title {
   font-family: Lora, serif;
@@ -265,8 +265,7 @@ p {
 .about__img {
   max-width: 588px;
   max-height: 448px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 16px;
 }
 .about__content {
@@ -455,4 +454,213 @@ p {
 }
 .events__content {
   flex: 1;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.contact {
+  background-color: #dfe5d9;
+  padding: 96px 120px;
+}
+.contact__container {
+  display: flex;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contact__intro {
+  width: 486px;
+  flex-shrink: 0;
+}
+.contact__desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-main);
+  margin-top: 24px;
+}
+.contact__note {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  color: var(--color-text-main);
+  margin-top: 24px;
+}
+.contact__form {
+  width: 588px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact__form .contact__note {
+  margin-top: 0;
+}
+.contact__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.contact__legend {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  color: var(--color-text-main);
+  padding: 0;
+  margin-bottom: 24px;
+}
+.contact__row {
+  display: flex;
+  gap: 24px;
+}
+.contact__field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.contact__field--comment {
+  margin-top: 24px;
+}
+.contact__label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-text-main);
+}
+.contact__input {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-main);
+  font-family: inherit;
+  width: 100%;
+  height: 48px;
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid var(--color-muted);
+  border-radius: 8px;
+}
+.contact__input::placeholder {
+  color: var(--color-muted);
+}
+.contact__input:focus {
+  outline: none;
+  border-color: var(--color-button);
+}
+.contact__select {
+  appearance: none;
+  background-image: url("../tyho.images/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 48px;
+  cursor: pointer;
+}
+.contact__textarea {
+  height: 112px;
+  padding: 16px;
+  resize: vertical;
+}
+.contact__agree {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 44px;
+}
+.contact__checkbox {
+  appearance: none;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  background-color: white;
+  border: 1px solid var(--color-muted);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contact__checkbox:checked {
+  background-color: var(--color-button);
+  border-color: var(--color-button);
+  box-shadow: inset 0 0 0 4px white;
+}
+.contact__agree-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  color: var(--color-text-main);
+  cursor: pointer;
+}
+.contact__button {
+  align-self: flex-start;
+  min-height: 48px;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.address {
+  padding: 96px 120px 0px 120px;
+}
+.address__container {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-muted) 30%, transparent);
+  padding-bottom: 48px;
+}
+.address__address {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-main);
+  margin-top: 24px;
+}
+.address__link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-button);
+  font-style: normal;
+}
+.address__note {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-top: 24px;
+}
+.address__social {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  gap: 24px;
+}
+.address__text {
+  height: 100%;
+}
+.address__map {
+  border-radius: 12px;
+  max-width: 560px;
+  max-height: 360px;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.footer__logo {
+  height: 32px;
+  width: 61px;
+}
+.footer__copyright, .footer__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  text-decoration: none;
+  color: var(--color-muted);
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,23 @@
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  &__logo {
+    height: 32px;
+    width: 61px;
+  }
+
+  // текст і посилання виглядають однаково
+  &__copyright,
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: none;
+    color: var(--color-muted);
+  }
+}

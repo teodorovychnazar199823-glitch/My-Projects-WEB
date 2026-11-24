@@ -1,0 +1,53 @@
+.address {
+  padding: 96px 120px 0px 120px;
+
+  &__container {
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--color-muted) 30%, transparent);
+    padding-bottom: 48px;
+  }
+
+  &__address {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-text-main);
+    margin-top: 24px;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-button);
+    font-style: normal;
+  }
+
+  &__note {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    margin-top: 24px;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 24px;
+  }
+
+  &__text {
+    height: 100%;
+  }
+
+  &__map {
+    border-radius: 12px;
+    max-width: 560px;
+    max-height: 360px;
+  }
+}

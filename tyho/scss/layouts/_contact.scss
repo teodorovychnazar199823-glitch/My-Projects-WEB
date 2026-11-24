@@ -1,0 +1,158 @@
+@use "../utils/mixin";
+
+// Секція «Залиш собі місце в ТИХО»: текст зліва (486px), форма справа (588px)
+.contact {
+  background-color: #dfe5d9;
+  padding: 96px 120px;
+
+  &__container {
+    display: flex;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  // Ліва колонка
+  &__intro {
+    width: 486px;
+    flex-shrink: 0;
+  }
+
+  &__desc {
+    @include mixin.text(16px, 400, 1.5, var(--color-text-main));
+    margin-top: 24px;
+  }
+
+  &__note {
+    @include mixin.text(14px, 400, 1.71, var(--color-text-main));
+    margin-top: 24px;
+  }
+
+  // Права колонка: усі блоки форми йдуть стовпчиком з відступом 24px
+  &__form {
+    width: 588px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  // У формі нотатка внизу вже має відступ через gap
+  &__form &__note {
+    margin-top: 0;
+  }
+
+  // fieldset з браузера має рамку й відступи — прибираємо
+  &__fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  // Підзаголовок «Контактні дані» / «Деталі візиту»
+  &__legend {
+    @include mixin.text(24px, 600, 1.33, var(--color-text-main));
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  // Два поля поруч
+  &__row {
+    display: flex;
+    gap: 24px;
+  }
+
+  // Одне поле: підпис зверху, поле знизу
+  &__field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+
+    &--comment {
+      margin-top: 24px;
+    }
+  }
+
+  &__label {
+    @include mixin.text(16px, 600, 1.5, var(--color-text-main));
+  }
+
+  // Спільний вигляд для input, select і textarea
+  &__input {
+    @include mixin.text(16px, 400, 1.5, var(--color-text-main));
+    font-family: inherit;
+    width: 100%;
+    height: 48px;
+    padding: 8px 16px;
+    background-color: white;
+    border: 1px solid var(--color-muted);
+    border-radius: 8px;
+
+    &::placeholder {
+      color: var(--color-muted);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-button);
+    }
+  }
+
+  // Своя стрілка замість браузерної
+  &__select {
+    appearance: none;
+    background-image: url("../tyho.images/chevron-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 48px;
+    cursor: pointer;
+  }
+
+  &__textarea {
+    height: 112px;
+    padding: 16px;
+    resize: vertical;
+  }
+
+  // Чекбокс зі згодою
+  &__agree {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 44px;
+  }
+
+  &__checkbox {
+    appearance: none;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    background-color: white;
+    border: 1px solid var(--color-muted);
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:checked {
+      background-color: var(--color-button);
+      border-color: var(--color-button);
+      box-shadow: inset 0 0 0 4px white;
+    }
+  }
+
+  &__agree-text {
+    @include mixin.text(14px, 400, 1.71, var(--color-text-main));
+    cursor: pointer;
+  }
+
+  // Кнопка бере вигляд з компонента .button, тут лише те, що треба саме <button>
+  &__button {
+    align-self: flex-start;
+    min-height: 48px;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+  }
+}
